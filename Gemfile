@@ -3,7 +3,6 @@ source 'http://rubygems.org'
 gem 'rails', '4.0.5'
 gem 'jquery-rails', '3.0.4'
 gem 'rails_autolink'
-gem 'mysql2'
 gem 'devise'
 gem 'twitter_oauth', git: 'git://github.com/moomerman/twitter_oauth.git'
 gem 'therubyracer'
@@ -47,7 +46,12 @@ gem "sass-rails", "4.0.2"
 gem 'coffee-rails', " ~> 4.0"
 gem 'uglifier'
 
+group :production do
+  gem 'pg'
+end
+
 group :development do
+  gem 'mysql2'
   gem 'annotate', '~> 2.6.1'
   gem 'quiet_assets'
   gem 'puma'
